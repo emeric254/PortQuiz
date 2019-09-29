@@ -10,7 +10,7 @@ then
 fi
 
 #
-timeout=3
+timeout=5
 lowest_port=1
 highest_port=65535
 echo '' > port_list.txt

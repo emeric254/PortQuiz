@@ -1,1 +1,5 @@
-1..65535 | % {echo ((new-object Net.Sockets.TcpClient).Connect("portquiz.net",$_)) "$_/tcp open"} 2>$null
+
+$lowest_port = 1
+$highest_port = 65535
+
+$lowest_port..$highest_port | % {echo ((new-object Net.Sockets.TcpClient).Connect("portquiz.net",$_)) "$_/tcp open"} > .\port_list.txt 2>$null
